@@ -1,0 +1,28 @@
+<head>
+  <title>Background Image</title>
+</head>
+<body Background="Wallpaper.png">
+  <h1 style="color: black; text-align: center;"><br><br><br>Hello!</h1>
+  <script language="javascript">
+    const date = new Date();
+    const formattedDate = getOrdinalSuffix(date.getDate()) + ' ' + (date.getHours() % 12).toString().padStart(2, '0') + ':' + date.getMinutes();
+
+    document.write('<h2 style="text-align: center;">' + formattedDate + '</h2>');
+
+    function getOrdinalSuffix(n) {
+      let j = n % 10; // Get the last digit
+      let k = n % 100; // Get the last two digits
+
+      if (j === 1 && k !== 11) {
+        return n + "st";
+      }
+      if (j === 2 && k !== 12) {
+        return n + "nd";
+      }
+      if (j === 3 && k !== 13) {
+        return n + "rd";
+      }
+      return n + "th";
+    }
+  </script>
+</body
