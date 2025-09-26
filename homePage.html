@@ -5,7 +5,7 @@
   <h1 style="color: black; text-align: center;"><br><br><br>Hello!</h1>
   <script language="javascript">
     const date = new Date();
-    const formattedDate = getOrdinalSuffix(date.getDate()) + ' ' + (date.getHours() % 12).toString().padStart(2, '0') + ':' + date.getMinutes();
+    const formattedDate = getOrdinalSuffix(date.getDate()) + ' ' + (date.getHours() % 12).toString().padStart(2, '0') + ':' + date.getMinutes().toString().padStart(2, '0');
 
     document.write('<h2 style="text-align: center;">' + formattedDate + '</h2>');
 
