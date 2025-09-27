@@ -1,28 +1,32 @@
 <head>
-  <title>Background Image</title>
+  <title>Home Page</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body Background="Wallpaper.png">
-  <h1 style="color: black; text-align: center;"><br><br><br>Hello!</h1>
-  <script language="javascript">
-    const date = new Date();
-    const formattedDate = getOrdinalSuffix(date.getDate()) + ' ' + (date.getHours() % 12).toString().padStart(2, '0') + ':' + date.getMinutes().toString().padStart(2, '0');
+  <div class = "container">
+    <h1 style="text-align: center;">"What is today, but yesterday's tomorrow?"</h1>
+    <h2>Mr Krabs</h2>
+    <script language="javascript">
+      const date = new Date();
+      const formattedDate = getOrdinalSuffix(date.getDate()) + ' ' + (date.getHours() % 12).toString().padStart(2, '0') + ':' + date.getMinutes().toString().padStart(2, '0');
 
-    document.write('<h2 style="text-align: center;">' + formattedDate + '</h2>');
+      document.write('<h2>' + formattedDate + '</h2>');
 
-    function getOrdinalSuffix(n) {
-      let j = n % 10; // Get the last digit
-      let k = n % 100; // Get the last two digits
+      function getOrdinalSuffix(n) {
+        let j = n % 10; // Get the last digit
+        let k = n % 100; // Get the last two digits
 
-      if (j === 1 && k !== 11) {
-        return n + "st";
+        if (j === 1 && k !== 11) {
+          return n + "st";
+        }
+        if (j === 2 && k !== 12) {
+          return n + "nd";
+        }
+        if (j === 3 && k !== 13) {
+          return n + "rd";
+        }
+        return n + "th";
       }
-      if (j === 2 && k !== 12) {
-        return n + "nd";
-      }
-      if (j === 3 && k !== 13) {
-        return n + "rd";
-      }
-      return n + "th";
-    }
-  </script>
+    </script>
+  </div>
 </body
